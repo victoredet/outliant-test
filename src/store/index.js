@@ -35,19 +35,41 @@ export default new Vuex.Store({
       },
       {
         id: 7,
-        name: "akin",
+        name: "Jeff",
         price: 345,
       },
     ],
+    editSelect: {
+      id: "",
+      name: "",
+      price: "",
+    },
+    search: "",
   },
   mutations: {
-    updateUser(state, payload) {
-      state.user = payload.user;
-      state.token = payload.token;
+    addProduct(state, payload) {
+      state.products.push(payload);
     },
-    localUser(state, user) {
-      state.user = user.user;
-      state.token = user.token;
+    deleteProduct(state, payload) {
+      state.products = payload;
+    },
+    updateProduct(state, payload) {
+      //   state.products.push(payload);
+      state.products.forEach((item) => {
+        if (item.id == payload.id) {
+          item.name = payload.name;
+          item.price = payload.price;
+        }
+      });
+    },
+    selectItem(state, payload) {
+      state.editSelect = payload;
+    },
+    clearItem(state, payload) {
+      state.editSelect = payload;
+    },
+    setSearch(state, payload) {
+      state.search = payload;
     },
   },
   actions: {},

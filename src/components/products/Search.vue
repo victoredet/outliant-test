@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     searchItem() {
-      console.log(this.search);
+      this.$store.commit("setSearch", this.search);
     },
   },
 };

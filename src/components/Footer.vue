@@ -1,33 +1,35 @@
 <template>
-    <footer class="bg-black text-white py-2">
-       <div class="col-md-7 col-10 mx-auto">
-           <div class="row">
-                <div class="col-md-3 col-6 mt-2">
-                    <p class="fw-bold">Trading Tools</p>
-                    <p>Live trading</p>
-                    <p class="link"> <router-link class="text-decoration-none text-white" to="/mining">Cloud Mining</router-link></p>
-                </div>
-                <div class="col-md-3 col-6 mt-2">
-                    <p class="fw-bold">Special programs</p>
-                    <p>Referral</p>
-                </div>
-                <div class="col-md-3 col-6 mt-2">
-                    <p class="fw-bold">Information</p>
-                    <p>About us</p>
-                    <p>Terms of use</p>
-                    <p>Privacy policy</p>
-                </div>
-                <div class="col-md-3 col-6 mt-2">
-                    <p class="fw-bold">Get help</p>
-                    <p>FAQ</p>
-                </div>
-            </div>
-       </div>
-        
-    </footer>
+  <div class="footer col-12 position-relative">
+    <div class="bg-warning py-5 w-100 position absolute bottom-0">
+      <div class="d-flex col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+        <div class="d-none d-md-block col-8 position-relative">
+          <div
+            class="d-none d-md-block image bg-secondary mx-auto col-8 sticky-navbar"></div>
+        </div>
+        <div class="col-md-6 col-sm-11 py-5 container">
+          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+          <p class="text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            beatae quod quo ipsa unde?
+          </p>
+          <div class="">
+            <button class="btn bg-primary text-white">Call to Action</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-export default{
-    name:'Footer'
-}
+export default {
+  name: "Footer",
+};
 </script>
+<style scoped>
+.sticky-navbar {
+  position: absolute;
+  top: -100px;
+  z-index: 1000;
+  height: 400px;
+}
+</style>
